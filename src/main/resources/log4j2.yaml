@@ -1,0 +1,19 @@
+configuration:
+  name: Log4j2_Config
+  Properties:
+    property:
+      name: path-log
+      value: logs
+
+  appenders:
+    Console:
+      name: Console_Appender
+      PatternLayout:
+        Pattern: "%highlight{%-5level}{FATAL=bg_red} %highlight{%msg} %xEx{short}%n"
+        #only info in console
+  Loggers:
+    Root:
+      level: all
+      AppenderRef:
+        #Console output everything
+        - ref: Console_Appender

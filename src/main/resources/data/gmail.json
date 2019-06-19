@@ -1,0 +1,18 @@
+{
+  "url-base": "http://127.0.0.1:4723/wd/hub",
+  "users": {
+    "login": [
+      "paprika0015@gmail.com"
+    ],
+    "password": [
+      "423489123789op"
+    ]
+  },
+  "message": {
+    "who-receive-message": "groot.epam@gmail.com",
+    "who-receive-copy-message": "orest.zhmurkevych.secondary@gmail.com",
+    "who-receive-hidden-copy-message": "galasyra6@gmail.com",
+    "theme-message": "Final battle",
+    "message": "Hello everyone!"
+  }
+}
