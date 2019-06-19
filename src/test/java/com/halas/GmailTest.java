@@ -38,7 +38,7 @@ public class GmailTest {
 
         Message message = new Message(getWhoReceiveMessage(), getWhoReceiveCopyMessage(), getWhoReceiveHiddenCopyMessage(), getThemeMessage(), getMessage());
         GmailMessageBO messageBO = new GmailMessageBO();
-        //messageBO.openMessageActivityAndCreateDraftMessage(message);
+        messageBO.openMessageActivityAndCreateDraftMessage(message);
         messageBO.goToDraftMessage();
     }
 
