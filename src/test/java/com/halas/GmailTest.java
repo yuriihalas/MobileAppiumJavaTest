@@ -40,12 +40,6 @@ public class GmailTest {
         GmailMessageBO messageBO = new GmailMessageBO();
         //messageBO.openMessageActivityAndCreateDraftMessage(message);
         messageBO.goToDraftMessage();
-
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
     @AfterMethod
