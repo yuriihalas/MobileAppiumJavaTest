@@ -12,6 +12,7 @@ import java.util.List;
 
 public class GmailWelcomePage extends CommonPage {
     private static final Logger LOG = LogManager.getLogger(GmailWelcomePage.class);
+
     @FindBy(id = "welcome_tour_got_it")
     private Button welcomeButton;
     @FindBy(id = "action_done")
@@ -22,14 +23,19 @@ public class GmailWelcomePage extends CommonPage {
     private TextView usersInfo;
 
     public void clickOnWelcomeButton() {
+        LOG.info("method clickOnWelcomeButton.");
+        driverWait.until(ExpectedConditions.visibilityOf(welcomeButton.getElement()));
+        driverWait.until(ExpectedConditions.elementToBeClickable(welcomeButton.getElement()));
         welcomeButton.click();
     }
 
     public void clickOnGoToGmail() {
+        LOG.info("method clickOnGoToGmail.");
         goToGmail.click();
     }
 
     public boolean isUserAuthorized(String email) {
+        LOG.info("method isUserAuthorized.");
         waitUntilNotLoadedAllUsers();
         return usersEmails.stream().anyMatch(a -> a.getText().equals(email));
     }

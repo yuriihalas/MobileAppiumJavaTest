@@ -11,7 +11,7 @@ import java.io.File;
 
 public class CustomTestListener extends TestListenerAdapter {
     private static final Logger LOG = LogManager.getLogger(CustomTestListener.class);
-    private static final String PATH_TO_SAVE_SCREEN_FORMAT = "src/main/resources/screenshots/%s.png";
+    private static final String PATH_TO_SAVE_SCREEN_FORMAT = "target/failures/screenshots/%s.png";
 
     @Override
     public void onTestFailure(ITestResult testResult) {
